@@ -6,6 +6,15 @@ Aplikasi ini dibangun menggunakan **Flutter** pada sisi mobile dan **Node.js (Ex
 
 ---
 
+## 👨‍💻 Maintainer
+
+Project ini dikembangkan oleh:
+
+**Yudha Haryoputranto**  
+GitHub: https://github.com/yudhah52
+
+---
+
 ## ✨ FITUR UTAMA
 
 ### 🔐 User Authentication
