@@ -52,7 +52,7 @@ Aplikasi ini dibangun menggunakan **Flutter** pada sisi mobile dan **Node.js (Ex
 ## ⚙️ SYSTEM ARCHITECTURE
 
 Sistem **Ngobrolin** menggunakan arsitektur full-stack yang terdiri dari beberapa komponen utama:
-
+```
 Mobile Application
 Flutter + Provider
 ⬇
@@ -67,7 +67,7 @@ PostgreSQL
 ⬇
 Notification Service
 Firebase Cloud Messaging (FCM)
-
+```
 Arsitektur ini memungkinkan komunikasi pesan secara **real-time**, pengelolaan data pengguna, serta pengiriman notifikasi secara efisien.
 
 ---
