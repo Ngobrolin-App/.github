@@ -4,6 +4,8 @@
 
 Aplikasi ini dibangun menggunakan **Flutter** pada sisi mobile dan **Node.js (Express.js)** pada sisi backend dengan **PostgreSQL** sebagai database. Sistem komunikasi real-time diimplementasikan menggunakan **WebSocket melalui Socket.io**, sehingga pesan dapat dikirim dan diterima secara instan antar pengguna.
 
+Selain itu, proses deployment backend telah diotomatisasi menggunakan **Jenkins CI/CD Pipeline** yang terintegrasi dengan **GitHub Webhook**, sehingga setiap perubahan pada repository dapat langsung memicu proses deployment secara otomatis ke server.
+
 ---
 
 ## 👨‍💻 Maintainer
@@ -42,26 +44,36 @@ GitHub: https://github.com/yudhah52
 - **Blocked user management**
 - **Language settings (Indonesia / English)**
 
+### 🚀 CI/CD & Deployment
+
+- Automated backend deployment menggunakan **Jenkins Pipeline**
+- Integrasi **GitHub Webhook** untuk trigger deployment otomatis setelah push
+- Deployment backend langsung ke VPS/server secara otomatis
+- Workflow deployment untuk mempermudah maintenance dan update aplikasi
+
 ---
 
 ## 🧱 TECH STACK
 
-| Layer / Komponen           | Teknologi yang Digunakan |
-|---------------------------|--------------------------|
-| **Mobile Application**    | Flutter |
-| **Arsitektur Aplikasi**   | MVVM (Model–View–ViewModel) |
-| **State Management**      | Provider |
-| **Backend API**           | Node.js, Express.js |
-| **Realtime Communication**| WebSocket (Socket.io) |
-| **Database**              | PostgreSQL |
-| **Push Notification**     | Firebase Cloud Messaging |
+| Layer / Komponen            | Teknologi yang Digunakan |
+|----------------------------|--------------------------|
+| **Mobile Application**     | Flutter |
+| **Arsitektur Aplikasi**    | MVVM (Model–View–ViewModel) |
+| **State Management**       | Provider |
+| **Backend API**            | Node.js, Express.js |
+| **Realtime Communication** | WebSocket (Socket.io) |
+| **Database**               | PostgreSQL |
+| **Push Notification**      | Firebase Cloud Messaging |
+| **CI/CD & Deployment**     | Jenkins Pipeline, GitHub Webhook |
+| **Version Control**        | Git & GitHub |
 
 ---
 
 ## ⚙️ SYSTEM ARCHITECTURE
 
 Sistem **Ngobrolin** menggunakan arsitektur full-stack yang terdiri dari beberapa komponen utama:
-```
+
+```text
 Mobile Application
 Flutter + Provider
 ⬇
@@ -77,7 +89,24 @@ PostgreSQL
 Notification Service
 Firebase Cloud Messaging (FCM)
 ```
-Arsitektur ini memungkinkan komunikasi pesan secara **real-time**, pengelolaan data pengguna, serta pengiriman notifikasi secara efisien.
+
+### 🔄 Deployment Workflow
+
+```text
+Developer Push Code
+⬇
+GitHub Repository
+⬇
+GitHub Webhook
+⬇
+Jenkins Pipeline
+⬇
+Automatic Backend Deployment
+⬇
+VPS / Production Server
+```
+
+Arsitektur ini memungkinkan komunikasi pesan secara **real-time**, pengelolaan data pengguna, serta proses deployment backend yang lebih **otomatis, efisien, dan scalable**.
 
 ---
 
@@ -91,6 +120,8 @@ Pada proyek ini saya bertanggung jawab untuk:
 - Mengimplementasikan **Bcrypt hashing** untuk keamanan autentikasi pengguna.
 - Mengembangkan berbagai fitur utama seperti **private chat, user search, private account, blocked user, dan pengaturan bahasa (ID/EN)**.
 - Mendesain serta mengembangkan **relational database schema** menggunakan **PostgreSQL**.
+- Mengimplementasikan proses **CI/CD backend deployment** menggunakan **Jenkins Pipeline** dan **GitHub Webhook**.
+- Mengelola deployment backend ke server/VPS agar proses update aplikasi dapat berjalan otomatis.
 
 ---
 
@@ -98,7 +129,7 @@ Pada proyek ini saya bertanggung jawab untuk:
 
 Dokumentasi tambahan mengenai desain antarmuka dapat dilihat pada tautan berikut:
 
-**Figma UI Design**  
+### Figma UI Design
 https://www.figma.com/design/dslLxMk9eGFG3uv0J60n8R/Ngobrolin?node-id=0-1&t=8zEPpILNlElecNqd-1
 
 ---
@@ -107,5 +138,5 @@ https://www.figma.com/design/dslLxMk9eGFG3uv0J60n8R/Ngobrolin?node-id=0-1&t=8zEP
 
 Source code proyek dapat dilihat pada repository berikut:
 
-**GitHub Repository**  
+### GitHub Repository
 https://github.com/Ngobrolin-App
